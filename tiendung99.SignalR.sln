@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tiendung99.SignalR.MVC", "tiendung99.SignalR.MVC\tiendung99.SignalR.MVC.csproj", "{2D7EC561-46AB-4C29-ABA5-4FF4B16E2789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tiendung99.SignalR.MVC", "tiendung99.SignalR.MVC\tiendung99.SignalR.MVC.csproj", "{2D7EC561-46AB-4C29-ABA5-4FF4B16E2789}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tiendung99.SignalR.Survey.Server", "tiendung99.SignalR.Survey\Server\tiendung99.SignalR.Survey.Server.csproj", "{BC79F9B9-1D9B-4A72-A6CB-46C7E0AD4181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tiendung99.SignalR.Survey.Client", "tiendung99.SignalR.Survey\Client\tiendung99.SignalR.Survey.Client.csproj", "{5FFB0709-4590-40C0-B3B6-83BC52FA6FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tiendung99.SignalR.Survey.Shared", "tiendung99.SignalR.Survey\Shared\tiendung99.SignalR.Survey.Shared.csproj", "{2E1EF25F-3A33-4776-83EF-B8298BF5DCCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{2D7EC561-46AB-4C29-ABA5-4FF4B16E2789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7EC561-46AB-4C29-ABA5-4FF4B16E2789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7EC561-46AB-4C29-ABA5-4FF4B16E2789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC79F9B9-1D9B-4A72-A6CB-46C7E0AD4181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC79F9B9-1D9B-4A72-A6CB-46C7E0AD4181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC79F9B9-1D9B-4A72-A6CB-46C7E0AD4181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC79F9B9-1D9B-4A72-A6CB-46C7E0AD4181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFB0709-4590-40C0-B3B6-83BC52FA6FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFB0709-4590-40C0-B3B6-83BC52FA6FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFB0709-4590-40C0-B3B6-83BC52FA6FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFB0709-4590-40C0-B3B6-83BC52FA6FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1EF25F-3A33-4776-83EF-B8298BF5DCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1EF25F-3A33-4776-83EF-B8298BF5DCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1EF25F-3A33-4776-83EF-B8298BF5DCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1EF25F-3A33-4776-83EF-B8298BF5DCCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
