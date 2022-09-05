@@ -7,8 +7,8 @@
 @inject ILogger<AddSurvey> Logger
 
 <EditForm EditContext="@editContext" OnSubmit="@OnSubmit">
-  @* Use the experimental ObjectGraphDataAnnotationsValidator which allows to validate complex nested models *@
-  @* <DataAnnotationsValidator /> *@
+    @* Use the experimental ObjectGraphDataAnnotationsValidator which allows to validate complex nested models *@
+    @* <DataAnnotationsValidator /> *@
   <ObjectGraphDataAnnotationsValidator />
   <div class="@(editContext.GetValidationMessages().Any() ? "alert alert-danger pb-0" : "")">
     <ValidationSummary />
@@ -17,38 +17,41 @@
   <div class="form-group">
     <label for="inputTitle">Title</label>
     <InputText id="inputTitle" class="form-control" @bind-Value="survey.Title" />
-    @if(editContext.GetValidationMessages(() => survey.Title).Any()){
-      <div class="invalid-feedback">
-        @editContext.GetValidationMessages(() => survey.Title).First()
-      </div>
-    }
+        @if (editContext.GetValidationMessages(() => survey.Title).Any())
+        {
+          <div class="invalid-feedback">
+                @editContext.GetValidationMessages(() => survey.Title).First()
+          </div>
+        }
   </div>
 
   <div class="form-group">
     <label for="inputMinutes">Minutes</label>
     <InputNumber id="inputMinutes" class="form-control" @bind-Value="survey.Minutes" />
-    @if(editContext.GetValidationMessages(() => survey.Minutes).Any()){
-      <div class="invalid-feedback">
-        @editContext.GetValidationMessages(() => survey.Minutes).First()
-      </div>
-    }
+        @if (editContext.GetValidationMessages(() => survey.Minutes).Any())
+        {
+          <div class="invalid-feedback">
+                @editContext.GetValidationMessages(() => survey.Minutes).First()
+          </div>
+        }
   </div>
 
   <label>Options</label>
-  @foreach (var option in survey.Options)
-  {
-    <div class="input-group mb-3">
-      <InputText id="inputMinutes" class="form-control" @bind-Value="option.OptionValue" />
-      <div class="input-group-append">
-        <button class="btn btn-outline-primary" type="button" @onclick="@(() => survey.RemoveOption(option))">Remove</button>
-      </div>
-      @if(editContext.GetValidationMessages(() => option.OptionValue).Any()){
-        <div class="invalid-feedback">
-          @editContext.GetValidationMessages(() => option.OptionValue).First()
+    @foreach (var option in survey.Options)
+    {
+        <div class="input-group mb-3">
+          <InputText id="inputMinutes" class="form-control" @bind-Value="option.OptionValue" />
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" @onclick="@(() => survey.RemoveOption(option))">Remove</button>
+          </div>
+            @if (editContext.GetValidationMessages(() => option.OptionValue).Any())
+            {
+                <div class="invalid-feedback">
+                    @editContext.GetValidationMessages(() => option.OptionValue).First()
+                </div>
+            }
         </div>
-      }
-    </div>
-  }
+    }
   <p><button class="btn btn-primary" type="button" @onclick="@(() => survey.AddOption())"><i class="oi oi-plus" /> Add Option</button></p>
 
   <p>
