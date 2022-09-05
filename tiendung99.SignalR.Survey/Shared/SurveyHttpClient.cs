@@ -21,9 +21,9 @@ namespace tiendung99.SignalR.Survey.Shared
             return await this.http.GetFromJsonAsync<SurveySummary[]>("api/survey");
         }
 
-        public async Task<Survey> GetSurvey(Guid surveyId)
+        public async Task<Surveyy> GetSurvey(Guid surveyId)
         {
-            return await this.http.GetFromJsonAsync<Survey>($"api/survey/{surveyId}");
+            return await this.http.GetFromJsonAsync<Surveyy>($"api/survey/{surveyId}");
         }
 
         public async Task<HttpResponseMessage> AddSurvey(AddSurveyModel survey)

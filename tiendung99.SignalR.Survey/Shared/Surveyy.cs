@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tiendung99.SignalR.Survey.Shared
 {
-    public record Survey : IExpirable
+    public record Surveyy : IExpirable
     {
         public Guid Id { get; init; } = Guid.NewGuid();
         public string Title { get; init; }
